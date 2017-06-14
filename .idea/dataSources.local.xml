@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="PostgreSQL - codb@localhost" uuid="37f09083-fe5a-4d2c-beff-95b65fbccb32">
+      <database-info product="PostgreSQL" version="9.6.0" jdbc-version="4.0" driver-name="PostgreSQL Native Driver" driver-version="PostgreSQL 9.4.1212">
+        <identifier-quote-string>&quot;</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="lower" quoted-identifiers="exact" />
+      <secret-storage>master_key</secret-storage>
+      <user-name>postgres</user-name>
+      <introspection-schemas>codb:pg_catalog,public,yuvv</introspection-schemas>
+      <resolve-scope>codb:public,yuvv</resolve-scope>
+      <unqualified-resolve-schemas>codb:public,yuvv</unqualified-resolve-schemas>
+    </data-source>
+  </component>
+</project>
