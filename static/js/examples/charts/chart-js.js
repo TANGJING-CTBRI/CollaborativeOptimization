@@ -137,7 +137,7 @@ var dataBars = {
 // =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 $(function(){
     //整个html页面刷新
-    setInterval(refresh,2000);
+    setInterval(refresh,500);
     function refresh(){
              $.ajax('/api/v1/if-exist-current-task/', {
         method: 'POST',
