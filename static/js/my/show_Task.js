@@ -103,6 +103,7 @@ window.onload=function()
 
       var session_pt = $('#test_vBRAS_session_pt').val();
       var session_sn = $('#test_vBRAS_session_sn').val();
+      var cloudstress = $('#test_vBRAS_session_cs').val();
 
       // document.getElementById("task_name").innerHTML = 'PPPoE并发会话容量'
       // document.getElementById("task_explain1").innerHTML = 'vBars接入性能测试'
@@ -145,6 +146,7 @@ window.onload=function()
                           PPPoEClientNum: session_sn,
                           porttype: session_pt,
                           taskId: id,
+                          cloudstress: cloudstress,
                       }],
                       //csrfmiddlewaretoken: $('input[type=hidden]').val()
                   }),
@@ -159,6 +161,7 @@ window.onload=function()
 
       var frame_pt = $('#test_vBRAS_frame_pt').val();
       var frame_sn = $('#test_vBRAS_frame_sn').val();
+      var cloudstress = $('#test_vBRAS_frame_cs').val();
 
       alert(frame_pt +' and '+  frame_sn);
       $.ajax('/api/v1/vnf2-uuid/',{
@@ -196,6 +199,7 @@ window.onload=function()
                           PPPoEClientNum: frame_sn,
                           porttype: frame_pt,
                           taskId: id,
+                          cloudstress: cloudstress,
                       }],
                       //csrfmiddlewaretoken: $('input[type=hidden]').val()
                   }),
@@ -209,6 +213,7 @@ window.onload=function()
   $('#test_vBRAS_multi_bg').click(function() {
       var multi_pt = $('#test_vBRAS_multi_pt').val();
       var multi_sn = $('#test_vBRAS_multi_sn').val();
+      var cloudstress = $('#test_vBRAS_multi_cs').val();
 
       alert(multi_pt +' and '+  multi_sn);
       $.ajax('/api/v1/vnf3-uuid/',{
@@ -244,6 +249,7 @@ window.onload=function()
                           PPPoEClientNum: multi_sn,
                           porttype: multi_pt,
                           taskId: id,
+                          cloudstress: cloudstress,
                       }],
                       csrfmiddlewaretoken: $('input[type=hidden]').val()
                   }),

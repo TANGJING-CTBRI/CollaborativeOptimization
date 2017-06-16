@@ -4,7 +4,7 @@ from cosite import views
 
 __author__ = 'Yuvv'
 
-urlpatterns = {
+urlpatterns = [
     url('^$', views.index),
     url('query/$', views.data_query),
     url('show/$', views.data_show),
@@ -24,4 +24,4 @@ urlpatterns = {
     url('report_vBRAS_session/$', views.report_session),
     url('report_vBRAS_frame/$', views.report_frame),
     url('report_vBRAS_multi/$', views.report_multi),
-}
+]

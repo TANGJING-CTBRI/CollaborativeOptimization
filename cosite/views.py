@@ -817,7 +817,8 @@ def api4_query_task_cpu(req):
             items = PPPoESessionTest.objects.filter(task_id=taskid)
             for item in items:
                 rst = {}
-                rst['add_time'] = item.add_time.strftime('%Y-%m-%d %H:%M:%S')
+                # rst['add_time'] = item.add_time.strftime('%Y-%m-%d %H:%M:%S')
+                rst['add_time'] =  time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(item.add_time))
                 # 上线速率
                 current_session = item.session_num
                 set_session = TestCaseState.objects.get(task_id=taskid).set_session
@@ -922,7 +923,8 @@ def api4_query_task_memory(req):
             # items = PPPoESessionTest.objects.filter(task_id=taskid)
             # for item in items:
             #     rst = {}
-            #     rst['add_time'] = item.add_time.strftime('%Y-%m-%d %H:%M:%S')
+            #     # rst['add_time'] = item.add_time.strftime('%Y-%m-%d %H:%M:%S')
+            #     rst['add_time'] = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(item.add_time))
             #     # 上线速率
             #     current_session = item.session_num
             #     set_session = TestCaseState.objects.get(task_id=taskid).set_session
